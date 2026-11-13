@@ -10,7 +10,8 @@ case "$MODE" in
   *) echo "usage: $0 [--verify|--debug|--logs|--telemetry]" >&2; exit 2 ;;
 esac
 pkill -x "$APP_NAME" >/dev/null 2>&1 || true
-dart run tool/bundle_kokoro.dart --check
+flutter pub get
+dart run tool/bundle_kokoro.dart
 flutter build macos --debug
 case "$MODE" in
   run) /usr/bin/open -n "$APP_BUNDLE" ;;

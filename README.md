@@ -14,6 +14,9 @@ dart run tool/bundle_kokoro.dart --check
 定义在 `lib/kokoro_model.dart`。脚本下载并验证 GPU 模型、生成资源清单，并移除旧 CPU 模型资源。
 `pubspec.yaml` 的 `assets/mediapipe/` 会将模型打包进 App，运行时不下载模型。
 模型权重不提交到 Git；首次克隆项目后运行上述打包命令恢复本地模型。资源清单和下载脚本保留在仓库中。
+模型已存在且校验通过时会直接复用，不会重复下载。macOS 的 `./script/build_and_run.sh`
+会自动获取依赖并补齐模型；直接使用 `flutter run`、Android/iOS 构建或 Xcode 构建前，先执行上述命令。
+最终发布的 App 安装包自带模型，普通用户安装后无需另行下载。
 不要运行包的 `mediapipe_core:bundle_models` 命令，它会覆盖项目的模型清单。
 模型使用 Apache 2.0 许可，分发时保留相应许可及声明。
 
