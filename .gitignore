@@ -46,3 +46,9 @@ app.*.map.json
 
 # Widget Preview related
 .widget_preview/
+
+.codex/
+
+# Generated model weights; restore with dart run tool/bundle_kokoro.dart.
+/assets/mediapipe/*
+!/assets/mediapipe/manifest.json

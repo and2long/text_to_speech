@@ -3,6 +3,9 @@
         android:label="text_to_speech"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <!-- Android 12+ requires vendor OpenCL libraries to be declared. -->
+        <uses-native-library android:name="libOpenCL.so" android:required="false" />
+        <uses-native-library android:name="libOpenCL-pixel.so" android:required="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

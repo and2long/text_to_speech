@@ -1,0 +1,10 @@
+{
+  "note": "Written by dart run tool/bundle_kokoro.dart. GPU Kokoro model.",
+  "models": [
+    {
+      "model": "kokoro_gpu",
+      "file": "1ef178b127ec48c737daf17eabb4cea5f6b3ffbc510aced270fe5c267bbeac52",
+      "url": "https://huggingface.co/litert-community/Kokoro-82M/resolve/33ad69fec6c4d9eb10a547aaf9a8c63e7c446a56/kokoro_int8_gpu_fp16.litertlm"
+    }
+  ]
+}
